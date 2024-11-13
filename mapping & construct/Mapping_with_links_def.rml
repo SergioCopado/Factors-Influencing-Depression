@@ -1,0 +1,731 @@
+@prefix : <http://www.semanticweb.org/data/> . 
+@prefix our: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@base <http://www.semanticweb.org/data/> .
+
+<#TriplesMap1>
+	     rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:Pais
+    ];
+    
+    rr:predicateObjectMap [
+    	rr:predicate our:nombre;
+    	rr:objectMap [
+      		rml:reference "Country";
+        rr:datatype xsd:string 
+      		
+    ];
+  ];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:estaEn;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/{Region}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/TipoRegimen/2022/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2021/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2020/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2019/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2018/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2017/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2016/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2015/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2014/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2013/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2012/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2011/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2010/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2008/{Country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/ValorDemocracia/2006/{Country}"; 
+     	  ] 
+     	].
+  <#TriplesMap2>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/depresion.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/IndiceDepresion/2022/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:IndiceDepresion
+    ];
+    
+    rr:predicateObjectMap [
+    	rr:predicate our:numeroCasos;
+    	rr:objectMap [
+      		rml:reference "cases";
+        rr:datatype xsd:int  
+      		]
+  ];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2022"; 
+	     rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Porcentaje de personas con depresion en cada país"; 
+     	    rr:datatype xsd:string
+	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2022"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+     rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "prevalence";
+        rr:datatype xsd:float  
+    ]
+  ] .
+
+<#TriplesMap3>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/{Region}";
+			               rr:termType rr:IRI; 
+			               rr:class our:Zona
+    ];
+    
+    rr:predicateObjectMap [
+    	rr:predicate our:nombre;
+    	rr:objectMap [
+      		rml:reference "Region";
+        rr:datatype xsd:string  
+      		]
+    ].
+    
+<#TriplesMap4>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/depresion.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/Poblacion/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:Poblacion
+    ];
+    	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2022"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Numero total de personas que habitan el país";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "pop2022";
+        rr:datatype xsd:float  
+      		]
+    ].
+    
+<#TriplesMap5>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/TipoRegimen/2022/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:TipoRegimen
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2022"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Tipo de sistema político del país";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:tipo;
+    	rr:objectMap [
+      		rml:reference "Regime type";
+        rr:datatype xsd:string  
+      		]
+    ].
+
+    
+<#TriplesMap6>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2021/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2021"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2021";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2021";
+        rr:datatype xsd:float  
+      		]
+    ].
+<#TriplesMap7>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2020/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2020"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2020";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2020";
+        rr:datatype xsd:float
+      		]
+    ].
+<#TriplesMap8>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2019/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2019"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2019";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2019";
+        rr:datatype xsd:float  
+      		]
+    ].
+    
+<#TriplesMap9>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2018/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2018"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2018";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2018";
+        rr:datatype xsd:float 
+      		]
+    ].
+    
+<#TriplesMap10>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2017/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2017"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2017";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2017";
+        rr:datatype xsd:float  
+      		]
+    ].    
+    
+<#TriplesMap11>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2016/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2016"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2016";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2016";
+        rr:datatype xsd:float 
+      		]
+    ].    
+<#TriplesMap12>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2015/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2015"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2015";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2015";
+        rr:datatype xsd:float 
+      		]
+    ].    
+<#TriplesMap13>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2014/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2014"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2014";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2014";
+        rr:datatype xsd:float
+      		]
+    ].    
+<#TriplesMap14>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2013/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2013"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2013";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2013";
+        rr:datatype xsd:float 
+      		]
+    ].    
+<#TriplesMap15>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2012/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2012"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2012";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2012";
+        rr:datatype xsd:float 
+      		]
+    ].    
+<#TriplesMap16>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2011/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2011"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2011";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2011";
+        rr:datatype xsd:float  
+      		]
+    ].    
+<#TriplesMap17>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2010/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2010"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2010";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2010";
+        rr:datatype xsd:float  
+      		]
+    ].    
+<#TriplesMap18>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2008/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2008"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2008";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2008";
+        rr:datatype xsd:float  
+      		]
+    ].        
+<#TriplesMap19>
+	      rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/democracia.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/ValorDemocracia/2006/{Country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:ValorDemocracia
+    ];
+     	rr:predicateObjectMap [ 
+     	  rr:predicate our:ano;  
+     	  rr:objectMap [ 
+     	    rr:constant "2006"; 
+           rr:datatype xsd:int
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:descripcion;  
+     	  rr:objectMap [ 
+     	    rr:constant "Valor de democracia en el año 2006";
+           rr:datatype xsd:string
+     	  ] 
+     	];
+    rr:predicateObjectMap [
+    	rr:predicate our:valor;
+    	rr:objectMap [
+      		rml:reference "2006";
+        rr:datatype xsd:float  
+      		]
+    ].    
+ <#TriplesMap20>
+	     rml:logicalSource [ 
+    	  rml:source "https://raw.githubusercontent.com/HugoFraile7/Dataset_final/main/depresion.csv" ;
+		            rml:referenceFormulation ql:CSV 
+	      ];
+    	rr:subjectMap [
+			               rr:template "http://www.semanticweb.org/data/{country}";
+			               rr:termType rr:IRI; 
+			               rr:class our:Pais
+    ];
+    
+    rr:predicateObjectMap [
+    	rr:predicate our:nombre;
+    	rr:objectMap [
+      		rml:reference "country";
+        rr:datatype xsd:string 
+      		
+    ];
+  ];
+
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/IndiceDepresion/2022/{country}"; 
+     	  ] 
+     	];
+ 	rr:predicateObjectMap [ 
+     	  rr:predicate our:posee;  
+     	  rr:objectMap [ 
+     	    rr:template "http://www.semanticweb.org/data/Poblacion/{country}"; 
+     	  ] 
+     	].  
+    
+    
+ 
