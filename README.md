@@ -22,9 +22,48 @@ The selected data focuses on 2022, the year with the most comprehensive and accu
 
 1. Zone and Country (linked via object properties).
 2. Metrics class with sub-classes for each type of metric, including:
-  1. **Gini Coefficient:** Income inequality measure.
-  2. **Population Density:** Number of residents per square kilometer.
-  3. **Depression Rate:** Percentage of people with depression in a country.
-  4. **Human Development Index:** Measures life expectancy, education level, and living standards.
-  5. **GDP per Capita:** National GDP divided by population.
-  6. **Political Regime and Democracy Score.**
+  * **Gini Coefficient:** Income inequality measure.
+  *  **Population Density:** Number of residents per square kilometer.
+  * **Depression Rate:** Percentage of people with depression in a country.
+  * **Human Development Index:** Measures life expectancy, education level, and living standards.
+  * **GDP per Capita:** National GDP divided by population.
+  * **Political Regime and Democracy Score.**
+
+## Ontology Development
+Our ontology enables the integration of multiple datasets linked by key indicators. The process involves:
+
+1. **Data Cleaning:** Using Python’s pandas to clean data, replacing spaces with underscores in CSV columns.
+2. **Data Enrichment:** Extracting data from DBpedia using SPARQL queries and converting data types to match the ontology requirements.
+3. **Mapping:** Creating triple maps for each key class and linking each with the appropriate data properties and object properties.
+4. **Output:** Generating RDF data using Helio Playground, then importing the Turtle files into GraphDB for query processing.
+
+## GraphDB Integration
+Data was stored and queried within GraphDB, using the following process:
+
+1. Create a Repository in GraphDB named semantic-web-project.
+2. Import Data in Turtle format, configuring the repository for efficient querying.
+3. Run Queries on the imported data to analyze and visualize correlations between factors.
+   
+## Application Interface
+We developed a Python interface for user-friendly access to the data, enabling:
+
+* Data Visualization: General data statistics and prevalence rates by country and factor.
+* Country-Specific Queries: Retrieve all data for a selected country.
+* Variable Comparisons: Generate visual comparisons between any two variables.
+* Correlation Analysis: Display heatmaps showing correlation among all variables using Pearson coefficients.
+* User Options:
+  * 1 Visualize general data (e.g., country count by regime type, depression prevalence).
+  * 2 View data for a specific country.
+  * 3 Compare two user-selected variables.
+  * 4 Display all-variable correlations as a heatmap.
+  * 5 List all countries in the dataset.
+  * 99 Exit.
+        
+## Key Findings
+Our findings suggest that:
+
+The Human Development Index correlates with higher depression prevalence. However, this relationship is complex and influenced by numerous external factors, such as seasonal sunlight exposure, social structure, and healthcare infrastructure.
+Results are not conclusive for all countries, as data availability and mental health diagnostic capabilities vary significantly.
+
+## Conclusions
+Our analysis highlights the multifactorial nature of depression, cautioning against oversimplified interpretations of data correlations. In under-resourced countries, mental health diagnoses are limited, impacting data accuracy. Further studies are needed to deepen understanding of these relationships.
