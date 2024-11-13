@@ -1,0 +1,133 @@
+@prefix : <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#> .
+@prefix ont: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio> .
+
+<http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio> rdf:type owl:Ontology ;
+                                                                       rdfs:comment "ontología web semantica" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#estaEn
+ont:estaEn rdf:type owl:ObjectProperty ;
+           rdfs:domain ont:Pais ;
+           rdfs:range ont:Zona .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#posee
+ont:posee rdf:type owl:ObjectProperty ;
+          rdfs:domain ont:Pais ;
+          rdfs:range ont:Metricas .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#ano
+ont:ano rdf:type owl:DatatypeProperty ;
+        rdfs:domain ont:Metricas ;
+        rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#descripcion
+ont:descripcion rdf:type owl:DatatypeProperty ;
+                rdfs:domain ont:Metricas ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#nombre
+ont:nombre rdf:type owl:DatatypeProperty ;
+           rdfs:domain ont:Metricas ,
+                       ont:Pais ,
+                       ont:Zona ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Este predicado define el nombre de cualquier cosa que posea un nombre" .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#numeroCasos
+ont:numeroCasos rdf:type owl:DatatypeProperty ;
+                rdfs:domain ont:IndiceDepresion ;
+                rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#tipo
+ont:tipo rdf:type owl:DatatypeProperty ;
+         rdfs:domain ont:TipoRegimen ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#valor
+ont:valor rdf:type owl:DatatypeProperty ;
+          rdfs:domain ont:Metricas ;
+          rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Country
+<http://dbpedia.org/ontology/Country> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#CoeficienteGini
+ont:CoeficienteGini rdf:type owl:Class ;
+                    rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#DensidadPoblacion
+ont:DensidadPoblacion rdf:type owl:Class ;
+                      rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#IndiceDepresion
+ont:IndiceDepresion rdf:type owl:Class ;
+                    rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#IndiceDesarrolloHumano
+ont:IndiceDesarrolloHumano rdf:type owl:Class ;
+                           rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#Metricas
+ont:Metricas rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#Pais
+ont:Pais rdf:type owl:Class ;
+         rdfs:subClassOf <http://dbpedia.org/ontology/Country> .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#PibPerCapita
+ont:PibPerCapita rdf:type owl:Class ;
+                 rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#Poblacion
+ont:Poblacion rdf:type owl:Class ;
+              rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#TipoRegimen
+ont:TipoRegimen rdf:type owl:Class ;
+                rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#ValorDemocracia
+ont:ValorDemocracia rdf:type owl:Class ;
+                    rdfs:subClassOf ont:Metricas .
+
+
+###  http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#Zona
+ont:Zona rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
