@@ -1,0 +1,303 @@
+1.1
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?regimen WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:posee ?n .
+      ?n a dbo:TipoRegimen .
+      ?n dbo:tipo ?regimen .
+}
+
+1.2
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:posee ?n .
+      ?n a dbo:ValorDemocracia .
+      ?n dbo:valor ?valor .
+}
+
+1.3
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?zona WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:estaEn ?z .
+    ?z dbo:nombre ?zona .
+}
+
+1.4
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:posee ?n .
+      ?n a dbo:IndiceDepresion .
+      ?n dbo:valor ?valor .
+}
+
+1.5
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:posee ?n .
+      ?n a dbo:Poblacion .
+      ?n dbo:valor ?valor .
+}
+
+1.6
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:posee ?n .
+    ?n a dbo:IndiceDepresion .
+    ?n dbo:numeroCasos ?valor .
+}
+
+1.7
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:posee ?n .
+    ?n a dbo:PibPerCapita .
+    ?n dbo:valor ?valor .
+}
+
+1.8
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:posee ?n .
+    ?n a dbo:DensidadPoblacion .
+    ?n dbo:valor ?valor .
+}
+
+1.9
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:posee ?n .
+      ?n a dbo:CoeficienteGini .
+      ?n dbo:valor ?valor .
+}
+
+1.10
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?valor WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:posee ?n .
+      ?n a dbo:IndiceDesarrolloHumano .
+      ?n dbo:valor ?valor .
+}
+
+2.1
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?2006 ?2008 ?2010 ?2011 ?2012 ?2013 ?2014 ?2015 ?2016 ?2017 ?2018 ?2019 ?2020 ?2021 WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:nombre "(literal con el nombre del país)" .
+      OPTIONAL {?c dbo:posee ?v1 .
+                ?v1 a dbo:ValorDemocracia .
+                ?v1 dbo:ano "2006"^^xsd:int .
+                ?v1 dbo:valor ?2006 .} .
+      OPTIONAL {?c dbo:posee ?v2 .
+                ?v2 a dbo:ValorDemocracia .
+                ?v2 dbo:ano "2008"^^xsd:int .
+                ?v2 dbo:valor ?2008 .} .
+      OPTIONAL {?c dbo:posee ?v3 .
+                ?v3 a dbo:ValorDemocracia .
+                ?v3 dbo:ano "2010"^^xsd:int .
+                ?v3 dbo:valor ?2010 .} .
+      OPTIONAL {?c dbo:posee ?v4 .
+                ?v4 a dbo:ValorDemocracia .
+                ?v4 dbo:ano "2011"^^xsd:int .
+                ?v4 dbo:valor ?2011 .} .
+      OPTIONAL {?c dbo:posee ?v5 .
+                ?v5 a dbo:ValorDemocracia .
+                ?v5 dbo:ano "2012"^^xsd:int .
+                ?v5 dbo:valor ?2012 .} .
+      OPTIONAL {?c dbo:posee ?v6 .
+                ?v6 a dbo:ValorDemocracia .
+                ?v6 dbo:ano "2013"^^xsd:int .
+                ?v6 dbo:valor ?2013 .} .
+      OPTIONAL {?c dbo:posee ?v7 .
+                ?v7 a dbo:ValorDemocracia .
+                ?v7 dbo:ano "2014"^^xsd:int .
+                ?v7 dbo:valor ?2014 .} .
+      OPTIONAL {?c dbo:posee ?v8 .
+                ?v8 a dbo:ValorDemocracia .
+                ?v8 dbo:ano "2015"^^xsd:int .
+                ?v8 dbo:valor ?2015 .} .
+      OPTIONAL {?c dbo:posee ?v9 .
+                ?v9 a dbo:ValorDemocracia .
+                ?v9 dbo:ano "2016"^^xsd:int .
+                ?v9 dbo:valor ?2016 .} .
+      OPTIONAL {?c dbo:posee ?v10 .
+                ?v10 a dbo:ValorDemocracia .
+                ?v10 dbo:ano "2017"^^xsd:int .
+                ?v10 dbo:valor ?2017 .} .
+      OPTIONAL {?c dbo:posee ?v11 .
+                ?v11 a dbo:ValorDemocracia .
+                ?v11 dbo:ano "2018"^^xsd:int .
+                ?v11 dbo:valor ?2018 .} .
+      OPTIONAL {?c dbo:posee ?v12 .
+                ?v12 a dbo:ValorDemocracia .
+                ?v12 dbo:ano "2019"^^xsd:int .
+                ?v12 dbo:valor ?2019 .} .
+      OPTIONAL {?c dbo:posee ?v13 .
+                ?v13 a dbo:ValorDemocracia .
+                ?v13 dbo:ano "2020"^^xsd:int .
+                ?v13 dbo:valor ?2020 .} .
+      OPTIONAL {?c dbo:posee ?v14 .
+                ?v14 a dbo:ValorDemocracia .
+                ?v14 dbo:ano "2021"^^xsd:int .
+                ?v14 dbo:valor ?2021 .} .
+
+} LIMIT 1
+
+2.2
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?2006 ?2008 ?2010 ?2011 ?2012 ?2013 ?2014 ?2015 ?2016 ?2017 ?2018 ?2019 ?2020 ?2021 WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:nombre "(literal del nombre del país)" .
+    OPTIONAL {?c dbo:posee ?v1 .
+            ?v1 a dbo:ValorDemocracia .
+            ?v1 dbo:ano "2006"^^xsd:int .
+            ?v1 dbo:valor ?2006 .} .
+    OPTIONAL {?c dbo:posee ?v2 .
+            ?v2 a dbo:ValorDemocracia .
+            ?v2 dbo:ano "2008"^^xsd:int .
+            ?v2 dbo:valor ?2008 .} .
+    OPTIONAL {?c dbo:posee ?v3 .
+            ?v3 a dbo:ValorDemocracia .
+            ?v3 dbo:ano "2010"^^xsd:int .
+            ?v3 dbo:valor ?2010 .} .
+    OPTIONAL {?c dbo:posee ?v4 .
+            ?v4 a dbo:ValorDemocracia .
+            ?v4 dbo:ano "2011"^^xsd:int .
+            ?v4 dbo:valor ?2011 .} .
+    OPTIONAL {?c dbo:posee ?v5 .
+            ?v5 a dbo:ValorDemocracia .
+            ?v5 dbo:ano "2012"^^xsd:int .
+            ?v5 dbo:valor ?2012 .} .
+    OPTIONAL {?c dbo:posee ?v6 .
+            ?v6 a dbo:ValorDemocracia .
+            ?v6 dbo:ano "2013"^^xsd:int .
+            ?v6 dbo:valor ?2013 .} .
+    OPTIONAL {?c dbo:posee ?v7 .
+            ?v7 a dbo:ValorDemocracia .
+            ?v7 dbo:ano "2014"^^xsd:int .
+            ?v7 dbo:valor ?2014 .} .
+    OPTIONAL {?c dbo:posee ?v8 .
+            ?v8 a dbo:ValorDemocracia .
+            ?v8 dbo:ano "2015"^^xsd:int .
+            ?v8 dbo:valor ?2015 .} .
+    OPTIONAL {?c dbo:posee ?v9 .
+            ?v9 a dbo:ValorDemocracia .
+            ?v9 dbo:ano "2016"^^xsd:int .
+            ?v9 dbo:valor ?2016 .} .
+    OPTIONAL {?c dbo:posee ?v10 .
+            ?v10 a dbo:ValorDemocracia .
+            ?v10 dbo:ano "2017"^^xsd:int .
+            ?v10 dbo:valor ?2017 .} .
+    OPTIONAL {?c dbo:posee ?v11 .
+            ?v11 a dbo:ValorDemocracia .
+            ?v11 dbo:ano "2018"^^xsd:int .
+            ?v11 dbo:valor ?2018 .} .
+    OPTIONAL {?c dbo:posee ?v12 .
+            ?v12 a dbo:ValorDemocracia .
+            ?v12 dbo:ano "2019"^^xsd:int .
+            ?v12 dbo:valor ?2019 .} .
+    OPTIONAL {?c dbo:posee ?v13 .
+            ?v13 a dbo:ValorDemocracia .
+            ?v13 dbo:ano "2020"^^xsd:int .
+            ?v13 dbo:valor ?2020 .} .
+    OPTIONAL {?c dbo:posee ?v14 .
+            ?v14 a dbo:ValorDemocracia .
+            ?v14 dbo:ano "2021"^^xsd:int .
+            ?v14 dbo:valor ?2021 .} .
+
+} LIMIT 1
+
+3.1 si v1 es ValorDemocracia
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x ?y WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:posee ?m1 .
+    ?m1 a dbo:ValorDemocracia .
+    ?m1 dbo:valor ?x .
+    ?m1 dbo:ano "2021"^^xsd:int .
+    ?c dbo:posee ?m2 .
+    ?m2 a dbo:(v2) .
+    ?m2 dbo:valor ?y .
+}
+
+3.2 si v2 es ValorDemocracia
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x ?y WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:posee ?m1 .
+    ?m1 a dbo:(v1) .
+    ?m1 dbo:valor ?y .
+    ?m1 dbo:ano "2021"^^xsd:int .
+    ?c dbo:posee ?m2 .
+    ?m2 a dbo:ValorDemocracia .
+    ?m2 dbo:valor ?x .
+}
+
+3.3 el resto de casos
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?x ?y WHERE{
+    ?c a dbo:Pais .
+    ?c dbo:posee ?m1 .
+    ?m1 a dbo:(v1) .
+    ?m1 dbo:valor ?x .
+    ?c dbo:posee ?m2 .
+    ?m2 a dbo:(v2) .
+    ?m2 dbo:valor ?y .
+}
+
+4.
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?nombre ?indice ?prevalencia ?casos ?poblacion ?pib ?densidad ?gini ?desarrollo WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:nombre ?nombre .
+      OPTIONAL {?c dbo:posee ?n2 .
+                ?n2 a dbo:ValorDemocracia .
+                ?n2 dbo:ano "2021"^^xsd:int .
+                ?n2 dbo:valor ?indice .
+                } .
+      OPTIONAL {?c dbo:posee ?n3 .
+                ?n3 a dbo:IndiceDepresion .
+                ?n3 dbo:valor ?prevalencia .
+                ?n3 dbo:numeroCasos ?casos.
+                } .
+      OPTIONAL {?c dbo:posee ?n4 .
+                ?n4 a dbo:Poblacion .
+                ?n4 dbo:valor ?poblacion .
+                } .
+      OPTIONAL {?c dbo:posee ?n5 .
+                ?n5 a dbo:PibPerCapita .
+                ?n5 dbo:valor ?pib .
+                } .
+      OPTIONAL{?c dbo:posee ?n6 .
+               ?n6 a dbo:DensidadPoblacion .
+               ?n6 dbo:valor ?densidad .
+               } .
+      OPTIONAL{?c dbo:posee ?n7 .
+               ?n7 a dbo:CoeficienteGini .
+               ?n7 dbo:valor ?gini .
+               } .
+      OPTIONAL{?c dbo:posee ?n8 .
+               ?n8 a dbo:IndiceDesarrolloHumano .
+               ?n8 dbo:valor ?desarrollo .
+               } .
+}
+
+5.
+PREFIX dbo: <http://www.semanticweb.org/34620/ontologies/2022/11/ontology-Sergio#>
+SELECT ?pais WHERE{
+      ?c a dbo:Pais .
+      ?c dbo:nombre ?pais .
+}
